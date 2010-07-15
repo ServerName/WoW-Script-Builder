@@ -13,3 +13,6 @@ K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Release\Script
 K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Release\ScriptBuilder_V0.1.exe
 K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Release\ScriptBuilder_V0.1.xml
 K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Release\ScriptBuilder_V0.1.pdb
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Release\ScriptBuilder_V0.1.exe
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Release\ScriptBuilder_V0.1.xml
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Release\ScriptBuilder_V0.1.pdb

@@ -30,3 +30,14 @@ K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBu
 K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.frmNpcAdd.resources
 K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.Resources.resources
 K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.vbproj.GenerateResource.Cache
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.exe
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.pdb
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.xml
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ResolveAssemblyReference.cache
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.frmMain.resources
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.frmNpcAdd.resources
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.Resources.resources
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.vbproj.GenerateResource.Cache
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.exe
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.xml
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.pdb
