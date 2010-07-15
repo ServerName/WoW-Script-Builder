@@ -1,0 +1,32 @@
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.exe
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.pdb
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.xml
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.Resources.resources
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.vbproj.GenerateResource.Cache
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.exe
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.xml
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.pdb
+C:\Users\Ivo\AppData\Local\Temporary Projects\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.Form1.resources
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.exe
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.xml
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.pdb
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.exe
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.pdb
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.xml
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.Resources.resources
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.vbproj.GenerateResource.Cache
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.frmMain.resources
+C:\Users\Ivo\Documents\Visual Studio 2008\Projects\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.frmNpcAdd.resources
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.exe
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.xml
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.pdb
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.exe
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.pdb
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.xml
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ResolveAssemblyReference.cache
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.frmMain.resources
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.frmNpcAdd.resources
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0._1.Resources.resources
+K:\Documents\Coding\C++\ScriptBuilder_V0.1\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.vbproj.GenerateResource.Cache
