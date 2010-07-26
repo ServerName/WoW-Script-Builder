@@ -6,6 +6,74 @@ ScriptBuilder_V0.1
 </name>
 </assembly>
 <members>
-
+<member name="T:ScriptBuilder_V0._1.WSB_DBDataSet.NPCDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSet.SpellsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSet.NPCRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSet.SpellsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSet.NPCRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSet.SpellsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.NPCTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.SpellsTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ScriptBuilder_V0._1.WSB_DBDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ScriptBuilder_V0._1.WSB_DBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ScriptBuilder_V0._1.WSB_DBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.TableAdapterManager.UpdateAll(ScriptBuilder_V0._1.WSB_DBDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
 </members>
 </doc>

@@ -61,7 +61,6 @@
             MessageBox.Show("There are no NPC's in the memory. Add at least one NPC in order to show the code and/or save the file.", "ERROR: No NPC in memory", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
-
         'End of the code showing.
     End Sub
 
@@ -71,6 +70,8 @@
     End Sub
 
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'WSB_DBDataSet.NPC' table. You can move, or remove it, as needed.
+        Me.NPCTableAdapter.Fill(Me.WSB_DBDataSet.NPC)
         'Tooltips
         ttpMain.SetToolTip(btnAddNpc, "Open a window to add an NPC to the script.")
         ttpMain.SetToolTip(btnShowCode, "Show the last version of the code.")

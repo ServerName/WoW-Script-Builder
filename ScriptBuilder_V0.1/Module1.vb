@@ -30,6 +30,10 @@
 
         collKey += 1
 
+        'Add mob to DB
+
+
+
         'Close 'n dispose
         frmNpcAdd.Dispose()
         frmNpcAdd.Close()

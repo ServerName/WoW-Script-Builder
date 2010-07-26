@@ -41,3 +41,5 @@ K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\Sc
 K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.exe
 K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.xml
 K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\obj\Debug\ScriptBuilder_V0.1.pdb
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\bin\Debug\ScriptBuilder_V0.1.exe.config
+K:\Documents\Coding\Git\Repos\WoW-Script-Builder\ScriptBuilder_V0.1\bin\Debug\WSB_DB.mdb

@@ -57,15 +57,28 @@ Partial Class frmMain
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.SyntaxMakeuoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.HelpToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.HowDoesThisWorkToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ReportABugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ChangelogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.lblCode = New System.Windows.Forms.Label
-        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.KeyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.BossDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn
+        Me.NPCBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.WSB_DBDataSet = New ScriptBuilder_V0._1.WSB_DBDataSet
+        Me.NPCTableAdapter = New ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.NPCTableAdapter
+        Me.WsB_DBDataSet1 = New ScriptBuilder_V0._1.WSB_DBDataSet
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NPCBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WSB_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WsB_DBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtInstanceName
@@ -89,19 +102,19 @@ Partial Class frmMain
         Me.txtCode.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCode.Location = New System.Drawing.Point(292, 43)
+        Me.txtCode.Location = New System.Drawing.Point(461, 43)
         Me.txtCode.Multiline = True
         Me.txtCode.Name = "txtCode"
         Me.txtCode.ReadOnly = True
         Me.txtCode.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtCode.Size = New System.Drawing.Size(380, 292)
+        Me.txtCode.Size = New System.Drawing.Size(450, 358)
         Me.txtCode.TabIndex = 7
         Me.txtCode.WordWrap = False
         '
         'btnSaveCode
         '
         Me.btnSaveCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnSaveCode.Location = New System.Drawing.Point(211, 312)
+        Me.btnSaveCode.Location = New System.Drawing.Point(366, 378)
         Me.btnSaveCode.Name = "btnSaveCode"
         Me.btnSaveCode.Size = New System.Drawing.Size(75, 23)
         Me.btnSaveCode.TabIndex = 8
@@ -111,7 +124,7 @@ Partial Class frmMain
         'btnShowCode
         '
         Me.btnShowCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnShowCode.Location = New System.Drawing.Point(211, 283)
+        Me.btnShowCode.Location = New System.Drawing.Point(285, 378)
         Me.btnShowCode.Name = "btnShowCode"
         Me.btnShowCode.Size = New System.Drawing.Size(75, 23)
         Me.btnShowCode.TabIndex = 9
@@ -121,7 +134,7 @@ Partial Class frmMain
         'btnAddNpc
         '
         Me.btnAddNpc.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAddNpc.Location = New System.Drawing.Point(211, 254)
+        Me.btnAddNpc.Location = New System.Drawing.Point(12, 378)
         Me.btnAddNpc.Name = "btnAddNpc"
         Me.btnAddNpc.Size = New System.Drawing.Size(75, 23)
         Me.btnAddNpc.TabIndex = 10
@@ -131,16 +144,16 @@ Partial Class frmMain
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 338)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 404)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(684, 24)
+        Me.StatusStrip1.Size = New System.Drawing.Size(923, 24)
         Me.StatusStrip1.TabIndex = 11
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(223, 19)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(302, 19)
         Me.ToolStripStatusLabel1.Spring = True
         Me.ToolStripStatusLabel1.Text = "Total NPCs: 0"
         '
@@ -148,7 +161,7 @@ Partial Class frmMain
         '
         Me.ToolStripStatusLabel4.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(223, 19)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(302, 19)
         Me.ToolStripStatusLabel4.Spring = True
         Me.ToolStripStatusLabel4.Text = "Total Spells: 0"
         '
@@ -157,7 +170,7 @@ Partial Class frmMain
         Me.ToolStripStatusLabel5.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
         Me.ToolStripStatusLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(223, 19)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(302, 19)
         Me.ToolStripStatusLabel5.Spring = True
         Me.ToolStripStatusLabel5.Text = "File Name: -"
         '
@@ -166,7 +179,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(684, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(923, 24)
         Me.MenuStrip1.TabIndex = 12
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -280,7 +293,7 @@ Partial Class frmMain
         '
         Me.CommentsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem1, Me.ViewToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.CommentsToolStripMenuItem.Name = "CommentsToolStripMenuItem"
-        Me.CommentsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CommentsToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.CommentsToolStripMenuItem.Text = "Comments"
         '
         'EditToolStripMenuItem1
@@ -304,8 +317,14 @@ Partial Class frmMain
         'SyntaxMakeuoToolStripMenuItem
         '
         Me.SyntaxMakeuoToolStripMenuItem.Name = "SyntaxMakeuoToolStripMenuItem"
-        Me.SyntaxMakeuoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SyntaxMakeuoToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.SyntaxMakeuoToolStripMenuItem.Text = "Syntax Editor"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem1
         '
@@ -341,22 +360,78 @@ Partial Class frmMain
         'lblCode
         '
         Me.lblCode.AutoSize = True
-        Me.lblCode.Location = New System.Drawing.Point(289, 27)
+        Me.lblCode.Location = New System.Drawing.Point(458, 27)
         Me.lblCode.Name = "lblCode"
         Me.lblCode.Size = New System.Drawing.Size(32, 13)
         Me.lblCode.TabIndex = 13
         Me.lblCode.Text = "Code"
         '
-        'SettingsToolStripMenuItem
+        'DataGridView1
         '
-        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SettingsToolStripMenuItem.Text = "Settings"
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.KeyDataGridViewTextBoxColumn, Me.NameDataGridViewTextBoxColumn, Me.IDDataGridViewTextBoxColumn, Me.BossDataGridViewCheckBoxColumn})
+        Me.DataGridView1.DataSource = Me.NPCBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 69)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(443, 303)
+        Me.DataGridView1.TabIndex = 14
+        '
+        'KeyDataGridViewTextBoxColumn
+        '
+        Me.KeyDataGridViewTextBoxColumn.DataPropertyName = "Key"
+        Me.KeyDataGridViewTextBoxColumn.HeaderText = "Key"
+        Me.KeyDataGridViewTextBoxColumn.Name = "KeyDataGridViewTextBoxColumn"
+        Me.KeyDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NameDataGridViewTextBoxColumn
+        '
+        Me.NameDataGridViewTextBoxColumn.DataPropertyName = "Name"
+        Me.NameDataGridViewTextBoxColumn.HeaderText = "Name"
+        Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
+        Me.NameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'BossDataGridViewCheckBoxColumn
+        '
+        Me.BossDataGridViewCheckBoxColumn.DataPropertyName = "Boss"
+        Me.BossDataGridViewCheckBoxColumn.HeaderText = "Boss"
+        Me.BossDataGridViewCheckBoxColumn.Name = "BossDataGridViewCheckBoxColumn"
+        Me.BossDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'NPCBindingSource
+        '
+        Me.NPCBindingSource.DataMember = "NPC"
+        Me.NPCBindingSource.DataSource = Me.WSB_DBDataSet
+        '
+        'WSB_DBDataSet
+        '
+        Me.WSB_DBDataSet.DataSetName = "WSB_DBDataSet"
+        Me.WSB_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'NPCTableAdapter
+        '
+        Me.NPCTableAdapter.ClearBeforeFill = True
+        '
+        'WsB_DBDataSet1
+        '
+        Me.WsB_DBDataSet1.DataSetName = "WSB_DBDataSet"
+        Me.WsB_DBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'frmMain
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.ClientSize = New System.Drawing.Size(684, 362)
+        Me.ClientSize = New System.Drawing.Size(923, 428)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblCode)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -373,6 +448,10 @@ Partial Class frmMain
         Me.StatusStrip1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NPCBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WSB_DBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WsB_DBDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -418,5 +497,14 @@ Partial Class frmMain
     Friend WithEvents ToolStripStatusLabel5 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents lblCode As System.Windows.Forms.Label
     Friend WithEvents SettingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents WSB_DBDataSet As ScriptBuilder_V0._1.WSB_DBDataSet
+    Friend WithEvents NPCBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents NPCTableAdapter As ScriptBuilder_V0._1.WSB_DBDataSetTableAdapters.NPCTableAdapter
+    Friend WithEvents KeyDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents BossDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents WsB_DBDataSet1 As ScriptBuilder_V0._1.WSB_DBDataSet
 
 End Class

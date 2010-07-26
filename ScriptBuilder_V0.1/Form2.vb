@@ -21,9 +21,7 @@
             listKey2 = 1
             'Check if the ID or name isn't used yet
             If collKey <> 0 Then
-                If listKey2 <= collKey Then
 
-                End If
 
             Else
                 Call npcAdd()
