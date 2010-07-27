@@ -23,29 +23,20 @@ Partial Class frmHeaderEdit
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim lblHeaderID As System.Windows.Forms.Label
         Dim lblHeaderText As System.Windows.Forms.Label
+        Dim lblHeaderId As System.Windows.Forms.Label
         Me.WSBDataSet = New ScriptBuilder_V0._1.WSBDataSet
         Me.HeadersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HeadersTableAdapter = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.HeadersTableAdapter
         Me.TableAdapterManager = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
-        Me.txtHeaderID = New System.Windows.Forms.TextBox
-        Me.txtHeaderText = New System.Windows.Forms.TextBox
         Me.btnHeaderEdit = New System.Windows.Forms.Button
-        lblHeaderID = New System.Windows.Forms.Label
+        Me.cbHeaderId = New System.Windows.Forms.ComboBox
+        Me.txtHeaderText = New System.Windows.Forms.TextBox
         lblHeaderText = New System.Windows.Forms.Label
+        lblHeaderId = New System.Windows.Forms.Label
         CType(Me.WSBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HeadersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'lblHeaderID
-        '
-        lblHeaderID.AutoSize = True
-        lblHeaderID.Location = New System.Drawing.Point(12, 54)
-        lblHeaderID.Name = "lblHeaderID"
-        lblHeaderID.Size = New System.Drawing.Size(59, 13)
-        lblHeaderID.TabIndex = 1
-        lblHeaderID.Text = "Header ID:"
         '
         'lblHeaderText
         '
@@ -78,22 +69,6 @@ Partial Class frmHeaderEdit
         Me.TableAdapterManager.NPCTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'txtHeaderID
-        '
-        Me.txtHeaderID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HeadersBindingSource, "ID", True))
-        Me.txtHeaderID.Location = New System.Drawing.Point(77, 51)
-        Me.txtHeaderID.Name = "txtHeaderID"
-        Me.txtHeaderID.Size = New System.Drawing.Size(100, 20)
-        Me.txtHeaderID.TabIndex = 2
-        '
-        'txtHeaderText
-        '
-        Me.txtHeaderText.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HeadersBindingSource, "Text", True))
-        Me.txtHeaderText.Location = New System.Drawing.Point(12, 25)
-        Me.txtHeaderText.Name = "txtHeaderText"
-        Me.txtHeaderText.Size = New System.Drawing.Size(311, 20)
-        Me.txtHeaderText.TabIndex = 4
-        '
         'btnHeaderEdit
         '
         Me.btnHeaderEdit.Location = New System.Drawing.Point(248, 51)
@@ -103,20 +78,51 @@ Partial Class frmHeaderEdit
         Me.btnHeaderEdit.Text = "Edit"
         Me.btnHeaderEdit.UseVisualStyleBackColor = True
         '
+        'lblHeaderId
+        '
+        lblHeaderId.AutoSize = True
+        lblHeaderId.Location = New System.Drawing.Point(12, 54)
+        lblHeaderId.Name = "lblHeaderId"
+        lblHeaderId.Size = New System.Drawing.Size(59, 13)
+        lblHeaderId.TabIndex = 5
+        lblHeaderId.Text = "Header ID:"
+        '
+        'cbHeaderId
+        '
+        Me.cbHeaderId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HeadersBindingSource, "ID", True))
+        Me.cbHeaderId.DataSource = Me.HeadersBindingSource
+        Me.cbHeaderId.DisplayMember = "ID"
+        Me.cbHeaderId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbHeaderId.FormattingEnabled = True
+        Me.cbHeaderId.Location = New System.Drawing.Point(77, 51)
+        Me.cbHeaderId.Name = "cbHeaderId"
+        Me.cbHeaderId.Size = New System.Drawing.Size(165, 21)
+        Me.cbHeaderId.TabIndex = 6
+        Me.cbHeaderId.ValueMember = "ID"
+        '
+        'txtHeaderText
+        '
+        Me.txtHeaderText.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HeadersBindingSource, "Text", True))
+        Me.txtHeaderText.Location = New System.Drawing.Point(12, 25)
+        Me.txtHeaderText.Name = "txtHeaderText"
+        Me.txtHeaderText.Size = New System.Drawing.Size(311, 20)
+        Me.txtHeaderText.TabIndex = 8
+        '
         'frmHeaderEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(335, 83)
-        Me.Controls.Add(Me.btnHeaderEdit)
-        Me.Controls.Add(lblHeaderID)
-        Me.Controls.Add(Me.txtHeaderID)
-        Me.Controls.Add(lblHeaderText)
         Me.Controls.Add(Me.txtHeaderText)
+        Me.Controls.Add(lblHeaderId)
+        Me.Controls.Add(Me.cbHeaderId)
+        Me.Controls.Add(Me.btnHeaderEdit)
+        Me.Controls.Add(lblHeaderText)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmHeaderEdit"
+        Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Edit Header"
@@ -130,7 +136,7 @@ Partial Class frmHeaderEdit
     Friend WithEvents HeadersBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents HeadersTableAdapter As ScriptBuilder_V0._1.WSBDataSetTableAdapters.HeadersTableAdapter
     Friend WithEvents TableAdapterManager As ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents txtHeaderID As System.Windows.Forms.TextBox
-    Friend WithEvents txtHeaderText As System.Windows.Forms.TextBox
     Friend WithEvents btnHeaderEdit As System.Windows.Forms.Button
+    Friend WithEvents cbHeaderId As System.Windows.Forms.ComboBox
+    Friend WithEvents txtHeaderText As System.Windows.Forms.TextBox
 End Class

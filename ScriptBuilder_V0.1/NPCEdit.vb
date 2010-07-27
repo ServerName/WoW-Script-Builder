@@ -1,10 +1,8 @@
-﻿Public Class frmNpcAdd
-
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNpcSave.Click
-
+﻿Public Class frmNpcEdit
+    Private Sub btnNpcEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNpcEdit.Click
         NpcName = txtNpcName.Text
         NpcId = txtNpcId.Text
-        NpcBoss = chkBoss.Checked
+        NpcBoss = chkNpcBoss.Checked
 
         'Check if something is filled in
         If NpcName = "" And NpcId = "" Then
@@ -17,15 +15,9 @@
             'Also check if the ID is actually a number -- Names can contain numbers, as it doesn't matter.
             MessageBox.Show("The NPC ID may only contain numbers. Please correct the ID in order to proceed.", "ERROR: Incorrect NPC ID", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Call npcAdd()
+            Me.NPCTableAdapter.EditNpc(Me.WSBDataSet.NPC, nudNpcId2.Value, NpcId, NpcName, NpcBoss)
+            Me.Dispose()
+            Me.Close()
         End If
-    End Sub
-
-    Private Sub frmNpcAdd_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'Tooltips
-        ttpNpcAdd.SetToolTip(txtNpcName, "Enter the name of the NPC here.")
-        ttpNpcAdd.SetToolTip(txtNpcId, "Enter the ID of the NPC here.")
-        ttpNpcAdd.SetToolTip(chkBoss, "Check this box if the NPC is a boss")
-        ttpNpcAdd.SetToolTip(btnNpcSave, "Save the NPC and close the window.")
     End Sub
 End Class

@@ -118,6 +118,24 @@
     <Compile Include="HeaderEdit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NPCDelete.Designer.vb">
+      <DependentUpon>NPCDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NPCDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPCEdit.Designer.vb">
+      <DependentUpon>NPCEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NPCEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPCView.Designer.vb">
+      <DependentUpon>NPCView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NPCView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TempClass.vb" />
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
@@ -126,10 +144,10 @@
       <DependentUpon>Main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NPC_Add.Designer.vb">
-      <DependentUpon>NPC_Add.vb</DependentUpon>
+    <Compile Include="NPCAdd.Designer.vb">
+      <DependentUpon>NPCAdd.vb</DependentUpon>
     </Compile>
-    <Compile Include="NPC_Add.vb">
+    <Compile Include="NPCAdd.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HeaderAdd.Designer.vb">
@@ -198,8 +216,8 @@
       <DependentUpon>Main.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="NPC_Add.resx">
-      <DependentUpon>NPC_Add.vb</DependentUpon>
+    <EmbeddedResource Include="NPCAdd.resx">
+      <DependentUpon>NPCAdd.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="HeaderAdd.resx">
@@ -214,6 +232,18 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCDelete.resx">
+      <DependentUpon>NPCDelete.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCEdit.resx">
+      <DependentUpon>NPCEdit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCView.resx">
+      <DependentUpon>NPCView.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

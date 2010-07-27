@@ -6,22 +6,6 @@
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShowCode.Click
         'Showing the code on the right of the screen.
-        'txtCode.Text = strComment1 + strHeaders -- Commented out due to showing the list of npcs while I'm working on that system...
-
-
-        Dim listNpcs As String
-        listNpcs = "Name    |   ID  |   Is-A-Boss"
-
-
-        listNpcs = listNpcs & vbCrLf & collName.Item(listKey) & " | " & collId.Item(listKey) & " | " & collBoss.Item(listKey)
-
-
-        txtCode.Text = listNpcs
-
-
-        'MessageBox.Show("There are no NPC's in this script. Add at least one NPC in order to show the code and/or save the file.", "ERROR: There are no NPC's in this script", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-
 
         'End of the code showing.
     End Sub

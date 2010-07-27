@@ -1,39 +1,15 @@
 ﻿Module Module1
-    'Collection
-    'NPC
-    Public collName As New Microsoft.VisualBasic.Collection()
-    Public collId As New Microsoft.VisualBasic.Collection()
-    Public collBoss As New Microsoft.VisualBasic.Collection()
-    Public collKey As Integer
-    Public listKey As Integer
-    Public listKey2 As Integer
-
-    'Spells
-
-    'TODO
-
-
     'Public Variables
+    'NPC forms variables
     Public NpcName As String
     Public NpcId As String
     Public NpcBoss As Boolean
-    Function npcAdd() As Boolean
 
-        'Add mob to collection
-        collName.Add(NpcName, collKey)
-        collId.Add(NpcId, collKey)
-        If NpcBoss Then
-            collBoss.Add(1, collKey)
-        Else
-            collBoss.Add(0, collKey)
-        End If
+    'Header forms variables
+    Public HeaderName As String
+    Public HeaderId As Integer
 
-        collKey += 1
-
-        'Close 'n dispose
-        frmNpcAdd.Dispose()
-        frmNpcAdd.Close()
-
-
-    End Function
+    'Comment forms variables
+    Public CommentName As String
+    Public CommentId As Integer
 End Module

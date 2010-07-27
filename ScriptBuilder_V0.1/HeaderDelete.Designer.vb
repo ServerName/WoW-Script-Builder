@@ -23,26 +23,21 @@ Partial Class frmHeaderDelete
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim lblHeaderID As System.Windows.Forms.Label
+        Dim lblHeaderId As System.Windows.Forms.Label
         Me.WSBDataSet = New ScriptBuilder_V0._1.WSBDataSet
         Me.HeadersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HeadersTableAdapter = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.HeadersTableAdapter
         Me.TableAdapterManager = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
-        Me.txtHeaderID = New System.Windows.Forms.TextBox
         Me.btnHeaderDelete = New System.Windows.Forms.Button
-        lblHeaderID = New System.Windows.Forms.Label
+        Me.cbHeaderId = New System.Windows.Forms.ComboBox
+        Me.HeadersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HeadersBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        lblHeaderId = New System.Windows.Forms.Label
         CType(Me.WSBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HeadersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HeadersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HeadersBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'lblHeaderID
-        '
-        lblHeaderID.AutoSize = True
-        lblHeaderID.Location = New System.Drawing.Point(12, 17)
-        lblHeaderID.Name = "lblHeaderID"
-        lblHeaderID.Size = New System.Drawing.Size(59, 13)
-        lblHeaderID.TabIndex = 1
-        lblHeaderID.Text = "Header ID:"
         '
         'WSBDataSet
         '
@@ -66,41 +61,68 @@ Partial Class frmHeaderDelete
         Me.TableAdapterManager.NPCTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'txtHeaderID
-        '
-        Me.txtHeaderID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HeadersBindingSource, "ID", True))
-        Me.txtHeaderID.Location = New System.Drawing.Point(77, 14)
-        Me.txtHeaderID.Name = "txtHeaderID"
-        Me.txtHeaderID.Size = New System.Drawing.Size(100, 20)
-        Me.txtHeaderID.TabIndex = 2
-        '
         'btnHeaderDelete
         '
-        Me.btnHeaderDelete.Location = New System.Drawing.Point(183, 12)
+        Me.btnHeaderDelete.Location = New System.Drawing.Point(290, 12)
         Me.btnHeaderDelete.Name = "btnHeaderDelete"
         Me.btnHeaderDelete.Size = New System.Drawing.Size(75, 23)
         Me.btnHeaderDelete.TabIndex = 3
         Me.btnHeaderDelete.Text = "Delete"
         Me.btnHeaderDelete.UseVisualStyleBackColor = True
         '
+        'lblHeaderId
+        '
+        lblHeaderId.AutoSize = True
+        lblHeaderId.Location = New System.Drawing.Point(12, 15)
+        lblHeaderId.Name = "lblHeaderId"
+        lblHeaderId.Size = New System.Drawing.Size(72, 13)
+        lblHeaderId.TabIndex = 3
+        lblHeaderId.Text = "Header Text: "
+        '
+        'cbHeaderId
+        '
+        Me.cbHeaderId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.HeadersBindingSource, "ID", True))
+        Me.cbHeaderId.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.HeadersBindingSource2, "ID", True))
+        Me.cbHeaderId.DataSource = Me.HeadersBindingSource1
+        Me.cbHeaderId.DisplayMember = "Text"
+        Me.cbHeaderId.FormattingEnabled = True
+        Me.cbHeaderId.Location = New System.Drawing.Point(90, 12)
+        Me.cbHeaderId.Name = "cbHeaderId"
+        Me.cbHeaderId.Size = New System.Drawing.Size(194, 21)
+        Me.cbHeaderId.TabIndex = 4
+        Me.cbHeaderId.ValueMember = "ID"
+        '
+        'HeadersBindingSource1
+        '
+        Me.HeadersBindingSource1.DataMember = "Headers"
+        Me.HeadersBindingSource1.DataSource = Me.WSBDataSet
+        '
+        'HeadersBindingSource2
+        '
+        Me.HeadersBindingSource2.DataMember = "Headers"
+        Me.HeadersBindingSource2.DataSource = Me.WSBDataSet
+        '
         'frmHeaderDelete
         '
         Me.AcceptButton = Me.btnHeaderDelete
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(270, 47)
+        Me.ClientSize = New System.Drawing.Size(377, 47)
+        Me.Controls.Add(lblHeaderId)
+        Me.Controls.Add(Me.cbHeaderId)
         Me.Controls.Add(Me.btnHeaderDelete)
-        Me.Controls.Add(lblHeaderID)
-        Me.Controls.Add(Me.txtHeaderID)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmHeaderDelete"
+        Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Delete Header"
         CType(Me.WSBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HeadersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HeadersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HeadersBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -109,6 +131,8 @@ Partial Class frmHeaderDelete
     Friend WithEvents HeadersBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents HeadersTableAdapter As ScriptBuilder_V0._1.WSBDataSetTableAdapters.HeadersTableAdapter
     Friend WithEvents TableAdapterManager As ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents txtHeaderID As System.Windows.Forms.TextBox
     Friend WithEvents btnHeaderDelete As System.Windows.Forms.Button
+    Friend WithEvents cbHeaderId As System.Windows.Forms.ComboBox
+    Friend WithEvents HeadersBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents HeadersBindingSource2 As System.Windows.Forms.BindingSource
 End Class
