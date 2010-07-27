@@ -1,0 +1,25 @@
+﻿Public Class frmNpcAdd
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNpcSave.Click
+        'Save 'n close
+        'MsgBox("Are you sure the information you added is correct?", 36, "Do you want to proceed?")
+        Dim dlgResultNpc As DialogResult
+        dlgResultNpc = MessageBox.Show("Are you sure the information you added is correct?", "Do you want to proceed?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+        Select Case dlgResultNpc
+            Case Windows.Forms.DialogResult.Yes
+                'TODO: Add Npc to the collection/array or whatever the fuck I'm going to use.
+                Me.Close()
+                Me.Dispose()
+        End Select
+    End Sub
+
+    Private Sub frmNpcAdd_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Tooltips
+        ttpNpcAdd.SetToolTip(txtNpcName, "Enter the name of the NPC here, make sure it contains only letters and underscores (_)!")
+        ttpNpcAdd.SetToolTip(txtNpcId, "Enter the ID of the NPC here, make sure it contains only numbers!")
+        ttpNpcAdd.SetToolTip(chkBoss, "Check this if the NPC you are about to add is a boss. It is only used to place it in a different part of the script, it makes no difference to the actual result of the script.")
+        ttpNpcAdd.SetToolTip(btnNpcSave, "Save the NPC and close the window.")
+    End Sub
+
+End Class
