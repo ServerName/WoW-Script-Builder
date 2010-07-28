@@ -454,7 +454,7 @@ Partial Public Class WSBDataSet
             Me.columnID.ReadOnly = true
             Me.columnID.Unique = true
             Me.columnText.AllowDBNull = false
-            Me.columnText.MaxLength = 250
+            Me.columnText.MaxLength = 1000
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -979,6 +979,7 @@ Partial Public Class WSBDataSet
             Me.columnBoss = New Global.System.Data.DataColumn("Boss", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnBoss)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint2", New Global.System.Data.DataColumn() {Me.columnNPCID}, false))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
             Me.columnID.AutoIncrementStep = -1
@@ -986,6 +987,7 @@ Partial Public Class WSBDataSet
             Me.columnID.ReadOnly = true
             Me.columnID.Unique = true
             Me.columnNPCID.AllowDBNull = false
+            Me.columnNPCID.Unique = true
             Me.columnNPCName.AllowDBNull = false
             Me.columnNPCName.MaxLength = 50
             Me.columnBoss.AllowDBNull = false

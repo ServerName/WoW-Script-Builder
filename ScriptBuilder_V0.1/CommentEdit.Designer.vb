@@ -29,9 +29,9 @@ Partial Class frmCommentEdit
         Me.CommentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CommentsTableAdapter = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.CommentsTableAdapter
         Me.TableAdapterManager = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
-        Me.txtCommentID = New System.Windows.Forms.TextBox
         Me.txtCommentText = New System.Windows.Forms.TextBox
         Me.btnCommentEdit = New System.Windows.Forms.Button
+        Me.cbCommentId = New System.Windows.Forms.ComboBox
         lblCommentID = New System.Windows.Forms.Label
         lblCommentText = New System.Windows.Forms.Label
         CType(Me.WSBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,7 +45,7 @@ Partial Class frmCommentEdit
         lblCommentID.Location = New System.Drawing.Point(12, 187)
         lblCommentID.Name = "lblCommentID"
         lblCommentID.Size = New System.Drawing.Size(68, 13)
-        lblCommentID.TabIndex = 1
+        lblCommentID.TabIndex = 4
         lblCommentID.Text = "Comment ID:"
         '
         'lblCommentText
@@ -79,15 +79,6 @@ Partial Class frmCommentEdit
         Me.TableAdapterManager.NPCTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'txtCommentID
-        '
-        Me.txtCommentID.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtCommentID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CommentsBindingSource, "ID", True))
-        Me.txtCommentID.Location = New System.Drawing.Point(86, 184)
-        Me.txtCommentID.Name = "txtCommentID"
-        Me.txtCommentID.Size = New System.Drawing.Size(100, 20)
-        Me.txtCommentID.TabIndex = 2
-        '
         'txtCommentText
         '
         Me.txtCommentText.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -98,7 +89,7 @@ Partial Class frmCommentEdit
         Me.txtCommentText.Multiline = True
         Me.txtCommentText.Name = "txtCommentText"
         Me.txtCommentText.Size = New System.Drawing.Size(311, 153)
-        Me.txtCommentText.TabIndex = 4
+        Me.txtCommentText.TabIndex = 0
         '
         'btnCommentEdit
         '
@@ -106,18 +97,33 @@ Partial Class frmCommentEdit
         Me.btnCommentEdit.Location = New System.Drawing.Point(248, 184)
         Me.btnCommentEdit.Name = "btnCommentEdit"
         Me.btnCommentEdit.Size = New System.Drawing.Size(75, 23)
-        Me.btnCommentEdit.TabIndex = 5
+        Me.btnCommentEdit.TabIndex = 2
         Me.btnCommentEdit.Text = "Edit"
         Me.btnCommentEdit.UseVisualStyleBackColor = True
+        '
+        'cbCommentId
+        '
+        Me.cbCommentId.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbCommentId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CommentsBindingSource, "ID", True))
+        Me.cbCommentId.DataSource = Me.CommentsBindingSource
+        Me.cbCommentId.DisplayMember = "ID"
+        Me.cbCommentId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbCommentId.FormattingEnabled = True
+        Me.cbCommentId.Location = New System.Drawing.Point(86, 185)
+        Me.cbCommentId.Name = "cbCommentId"
+        Me.cbCommentId.Size = New System.Drawing.Size(156, 21)
+        Me.cbCommentId.TabIndex = 1
+        Me.cbCommentId.ValueMember = "ID"
         '
         'frmCommentEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(335, 216)
+        Me.Controls.Add(Me.cbCommentId)
         Me.Controls.Add(Me.btnCommentEdit)
         Me.Controls.Add(lblCommentID)
-        Me.Controls.Add(Me.txtCommentID)
         Me.Controls.Add(lblCommentText)
         Me.Controls.Add(Me.txtCommentText)
         Me.MinimumSize = New System.Drawing.Size(351, 254)
@@ -135,7 +141,7 @@ Partial Class frmCommentEdit
     Friend WithEvents CommentsBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents CommentsTableAdapter As ScriptBuilder_V0._1.WSBDataSetTableAdapters.CommentsTableAdapter
     Friend WithEvents TableAdapterManager As ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents txtCommentID As System.Windows.Forms.TextBox
     Friend WithEvents txtCommentText As System.Windows.Forms.TextBox
     Friend WithEvents btnCommentEdit As System.Windows.Forms.Button
+    Friend WithEvents cbCommentId As System.Windows.Forms.ComboBox
 End Class

@@ -23,34 +23,24 @@ Partial Class frmNpcEdit
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim lblNpcId As System.Windows.Forms.Label
         Dim lblNpcName As System.Windows.Forms.Label
+        Dim lblNpcId As System.Windows.Forms.Label
         Dim lblNpcId2 As System.Windows.Forms.Label
         Me.WSBDataSet = New ScriptBuilder_V0._1.WSBDataSet
         Me.NPCBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NPCTableAdapter = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.NPCTableAdapter
         Me.TableAdapterManager = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
-        Me.txtNpcId = New System.Windows.Forms.TextBox
         Me.chkNpcBoss = New System.Windows.Forms.CheckBox
         Me.txtNpcName = New System.Windows.Forms.TextBox
         Me.btnNpcEdit = New System.Windows.Forms.Button
-        Me.nudNpcId2 = New System.Windows.Forms.NumericUpDown
-        lblNpcId = New System.Windows.Forms.Label
+        Me.txtNpcId = New System.Windows.Forms.TextBox
+        Me.cbNpcId2 = New System.Windows.Forms.ComboBox
         lblNpcName = New System.Windows.Forms.Label
+        lblNpcId = New System.Windows.Forms.Label
         lblNpcId2 = New System.Windows.Forms.Label
         CType(Me.WSBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NPCBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudNpcId2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'lblNpcId
-        '
-        lblNpcId.AutoSize = True
-        lblNpcId.Location = New System.Drawing.Point(243, 9)
-        lblNpcId.Name = "lblNpcId"
-        lblNpcId.Size = New System.Drawing.Size(46, 13)
-        lblNpcId.TabIndex = 1
-        lblNpcId.Text = "NPC ID:"
         '
         'lblNpcName
         '
@@ -61,10 +51,19 @@ Partial Class frmNpcEdit
         lblNpcName.TabIndex = 5
         lblNpcName.Text = "NPC Name:"
         '
+        'lblNpcId
+        '
+        lblNpcId.AutoSize = True
+        lblNpcId.Location = New System.Drawing.Point(243, 9)
+        lblNpcId.Name = "lblNpcId"
+        lblNpcId.Size = New System.Drawing.Size(46, 13)
+        lblNpcId.TabIndex = 1
+        lblNpcId.Text = "NPC ID:"
+        '
         'lblNpcId2
         '
         lblNpcId2.AutoSize = True
-        lblNpcId2.Location = New System.Drawing.Point(12, 51)
+        lblNpcId2.Location = New System.Drawing.Point(12, 56)
         lblNpcId2.Name = "lblNpcId2"
         lblNpcId2.Size = New System.Drawing.Size(21, 13)
         lblNpcId2.TabIndex = 7
@@ -92,18 +91,10 @@ Partial Class frmNpcEdit
         Me.TableAdapterManager.NPCTableAdapter = Me.NPCTableAdapter
         Me.TableAdapterManager.UpdateOrder = ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'txtNpcId
-        '
-        Me.txtNpcId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NPCBindingSource, "NPCID", True))
-        Me.txtNpcId.Location = New System.Drawing.Point(246, 25)
-        Me.txtNpcId.Name = "txtNpcId"
-        Me.txtNpcId.Size = New System.Drawing.Size(77, 20)
-        Me.txtNpcId.TabIndex = 2
-        '
         'chkNpcBoss
         '
         Me.chkNpcBoss.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.NPCBindingSource, "Boss", True))
-        Me.chkNpcBoss.Location = New System.Drawing.Point(188, 54)
+        Me.chkNpcBoss.Location = New System.Drawing.Point(188, 55)
         Me.chkNpcBoss.Name = "chkNpcBoss"
         Me.chkNpcBoss.Size = New System.Drawing.Size(52, 19)
         Me.chkNpcBoss.TabIndex = 4
@@ -127,21 +118,34 @@ Partial Class frmNpcEdit
         Me.btnNpcEdit.Text = "Edit"
         Me.btnNpcEdit.UseVisualStyleBackColor = True
         '
-        'nudNpcId2
+        'txtNpcId
         '
-        Me.nudNpcId2.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.NPCBindingSource, "ID", True))
-        Me.nudNpcId2.Location = New System.Drawing.Point(39, 51)
-        Me.nudNpcId2.Name = "nudNpcId2"
-        Me.nudNpcId2.Size = New System.Drawing.Size(143, 20)
-        Me.nudNpcId2.TabIndex = 8
+        Me.txtNpcId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NPCBindingSource, "NPCID", True))
+        Me.txtNpcId.Location = New System.Drawing.Point(246, 25)
+        Me.txtNpcId.Name = "txtNpcId"
+        Me.txtNpcId.Size = New System.Drawing.Size(77, 20)
+        Me.txtNpcId.TabIndex = 2
+        '
+        'cbNpcId2
+        '
+        Me.cbNpcId2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NPCBindingSource, "ID", True))
+        Me.cbNpcId2.DataSource = Me.NPCBindingSource
+        Me.cbNpcId2.DisplayMember = "ID"
+        Me.cbNpcId2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNpcId2.FormattingEnabled = True
+        Me.cbNpcId2.Location = New System.Drawing.Point(39, 52)
+        Me.cbNpcId2.Name = "cbNpcId2"
+        Me.cbNpcId2.Size = New System.Drawing.Size(143, 21)
+        Me.cbNpcId2.TabIndex = 8
+        Me.cbNpcId2.ValueMember = "ID"
         '
         'frmNpcEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(335, 83)
+        Me.Controls.Add(Me.cbNpcId2)
         Me.Controls.Add(lblNpcId2)
-        Me.Controls.Add(Me.nudNpcId2)
         Me.Controls.Add(Me.btnNpcEdit)
         Me.Controls.Add(lblNpcName)
         Me.Controls.Add(Me.txtNpcName)
@@ -158,7 +162,6 @@ Partial Class frmNpcEdit
         Me.Text = "Edit NPC"
         CType(Me.WSBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NPCBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudNpcId2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -167,9 +170,9 @@ Partial Class frmNpcEdit
     Friend WithEvents NPCBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents NPCTableAdapter As ScriptBuilder_V0._1.WSBDataSetTableAdapters.NPCTableAdapter
     Friend WithEvents TableAdapterManager As ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents txtNpcId As System.Windows.Forms.TextBox
     Friend WithEvents chkNpcBoss As System.Windows.Forms.CheckBox
     Friend WithEvents txtNpcName As System.Windows.Forms.TextBox
     Friend WithEvents btnNpcEdit As System.Windows.Forms.Button
-    Friend WithEvents nudNpcId2 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents txtNpcId As System.Windows.Forms.TextBox
+    Friend WithEvents cbNpcId2 As System.Windows.Forms.ComboBox
 End Class

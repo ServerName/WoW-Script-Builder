@@ -2,8 +2,9 @@
     'Public Variables
     'NPC forms variables
     Public NpcName As String
-    Public NpcId As String
+    Public NpcId As Integer
     Public NpcBoss As Boolean
+    Public NpcId2 As Integer
 
     'Header forms variables
     Public HeaderName As String

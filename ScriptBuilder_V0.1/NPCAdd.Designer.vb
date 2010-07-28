@@ -99,9 +99,9 @@ Partial Class frmNpcAdd
         'chkNpcBoss
         '
         Me.chkNpcBoss.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.NPCBindingSource, "Boss", True))
-        Me.chkNpcBoss.Location = New System.Drawing.Point(12, 51)
+        Me.chkNpcBoss.Location = New System.Drawing.Point(188, 55)
         Me.chkNpcBoss.Name = "chkNpcBoss"
-        Me.chkNpcBoss.Size = New System.Drawing.Size(104, 24)
+        Me.chkNpcBoss.Size = New System.Drawing.Size(52, 19)
         Me.chkNpcBoss.TabIndex = 6
         Me.chkNpcBoss.Text = "Boss"
         Me.chkNpcBoss.UseVisualStyleBackColor = True

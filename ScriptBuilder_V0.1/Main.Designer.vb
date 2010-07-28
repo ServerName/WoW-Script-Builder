@@ -26,14 +26,13 @@ Partial Class frmMain
         Me.txtInstanceName = New System.Windows.Forms.TextBox
         Me.lblInstanceName = New System.Windows.Forms.Label
         Me.txtCode = New System.Windows.Forms.TextBox
-        Me.btnSaveCode = New System.Windows.Forms.Button
         Me.btnShowCode = New System.Windows.Forms.Button
         Me.btnAddNpc = New System.Windows.Forms.Button
         Me.ttpMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel
-        Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel
-        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel
+        Me.sbNpcTotal = New System.Windows.Forms.ToolStripStatusLabel
+        Me.sbSpellTotal = New System.Windows.Forms.ToolStripStatusLabel
+        Me.sbFileName = New System.Windows.Forms.ToolStripStatusLabel
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
@@ -75,8 +74,13 @@ Partial Class frmMain
         Me.ReportABugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ChangelogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.lblCode = New System.Windows.Forms.Label
+        Me.WsbDataSet1 = New ScriptBuilder_V0._1.WSBDataSet
+        Me.NpcTableAdapter1 = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.NPCTableAdapter
+        Me.TableAdapterManager1 = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
+        Me.QueriesTableAdapter1 = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.QueriesTableAdapter
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.WsbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtInstanceName
@@ -109,20 +113,10 @@ Partial Class frmMain
         Me.txtCode.TabIndex = 7
         Me.txtCode.WordWrap = False
         '
-        'btnSaveCode
-        '
-        Me.btnSaveCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnSaveCode.Location = New System.Drawing.Point(211, 312)
-        Me.btnSaveCode.Name = "btnSaveCode"
-        Me.btnSaveCode.Size = New System.Drawing.Size(75, 23)
-        Me.btnSaveCode.TabIndex = 8
-        Me.btnSaveCode.Text = "Save"
-        Me.btnSaveCode.UseVisualStyleBackColor = True
-        '
         'btnShowCode
         '
         Me.btnShowCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnShowCode.Location = New System.Drawing.Point(211, 283)
+        Me.btnShowCode.Location = New System.Drawing.Point(93, 312)
         Me.btnShowCode.Name = "btnShowCode"
         Me.btnShowCode.Size = New System.Drawing.Size(75, 23)
         Me.btnShowCode.TabIndex = 9
@@ -132,7 +126,7 @@ Partial Class frmMain
         'btnAddNpc
         '
         Me.btnAddNpc.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAddNpc.Location = New System.Drawing.Point(211, 254)
+        Me.btnAddNpc.Location = New System.Drawing.Point(12, 312)
         Me.btnAddNpc.Name = "btnAddNpc"
         Me.btnAddNpc.Size = New System.Drawing.Size(75, 23)
         Me.btnAddNpc.TabIndex = 10
@@ -141,36 +135,36 @@ Partial Class frmMain
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.sbNpcTotal, Me.sbSpellTotal, Me.sbFileName})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 338)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(684, 24)
         Me.StatusStrip1.TabIndex = 11
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'ToolStripStatusLabel1
+        'sbNpcTotal
         '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(223, 19)
-        Me.ToolStripStatusLabel1.Spring = True
-        Me.ToolStripStatusLabel1.Text = "Total NPCs: 0"
+        Me.sbNpcTotal.Name = "sbNpcTotal"
+        Me.sbNpcTotal.Size = New System.Drawing.Size(212, 19)
+        Me.sbNpcTotal.Spring = True
+        Me.sbNpcTotal.Text = "Total NPCs: 0"
         '
-        'ToolStripStatusLabel4
+        'sbSpellTotal
         '
-        Me.ToolStripStatusLabel4.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left
-        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(223, 19)
-        Me.ToolStripStatusLabel4.Spring = True
-        Me.ToolStripStatusLabel4.Text = "Total Spells: 0"
+        Me.sbSpellTotal.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left
+        Me.sbSpellTotal.Name = "sbSpellTotal"
+        Me.sbSpellTotal.Size = New System.Drawing.Size(212, 19)
+        Me.sbSpellTotal.Spring = True
+        Me.sbSpellTotal.Text = "Total Spells: 0"
         '
-        'ToolStripStatusLabel5
+        'sbFileName
         '
-        Me.ToolStripStatusLabel5.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left
-        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(223, 19)
-        Me.ToolStripStatusLabel5.Spring = True
-        Me.ToolStripStatusLabel5.Text = "File Name: -"
+        Me.sbFileName.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left
+        Me.sbFileName.Name = "sbFileName"
+        Me.sbFileName.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.sbFileName.Size = New System.Drawing.Size(223, 19)
+        Me.sbFileName.Spring = True
+        Me.sbFileName.Text = "File Name: -"
         '
         'MenuStrip1
         '
@@ -323,38 +317,38 @@ Partial Class frmMain
         '
         Me.CommentsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem1, Me.ViewToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ViewToolStripMenuItem1})
         Me.CommentsToolStripMenuItem.Name = "CommentsToolStripMenuItem"
-        Me.CommentsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CommentsToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.CommentsToolStripMenuItem.Text = "Comments"
         '
         'EditToolStripMenuItem1
         '
         Me.EditToolStripMenuItem1.Name = "EditToolStripMenuItem1"
-        Me.EditToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.EditToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.EditToolStripMenuItem1.Text = "Add"
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.ViewToolStripMenuItem.Text = "Edit"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'ViewToolStripMenuItem1
         '
         Me.ViewToolStripMenuItem1.Name = "ViewToolStripMenuItem1"
-        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.ViewToolStripMenuItem1.Text = "View"
         '
         'SyntaxMakeuoToolStripMenuItem
         '
         Me.SyntaxMakeuoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.EditToolStripMenuItem2, Me.DeleteToolStripMenuItem1, Me.ViewToolStripMenuItem2})
         Me.SyntaxMakeuoToolStripMenuItem.Name = "SyntaxMakeuoToolStripMenuItem"
-        Me.SyntaxMakeuoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SyntaxMakeuoToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.SyntaxMakeuoToolStripMenuItem.Text = "Headers"
         '
         'AddToolStripMenuItem
@@ -384,13 +378,13 @@ Partial Class frmMain
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.SettingsToolStripMenuItem.Text = "Syntax Editor"
         '
         'SettingsToolStripMenuItem1
         '
         Me.SettingsToolStripMenuItem1.Name = "SettingsToolStripMenuItem1"
-        Me.SettingsToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.SettingsToolStripMenuItem1.Size = New System.Drawing.Size(142, 22)
         Me.SettingsToolStripMenuItem1.Text = "Settings"
         '
         'HelpToolStripMenuItem1
@@ -433,6 +427,23 @@ Partial Class frmMain
         Me.lblCode.TabIndex = 13
         Me.lblCode.Text = "Code:"
         '
+        'WsbDataSet1
+        '
+        Me.WsbDataSet1.DataSetName = "WSBDataSet"
+        Me.WsbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'NpcTableAdapter1
+        '
+        Me.NpcTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.CommentsTableAdapter = Nothing
+        Me.TableAdapterManager1.HeadersTableAdapter = Nothing
+        Me.TableAdapterManager1.NPCTableAdapter = Me.NpcTableAdapter1
+        Me.TableAdapterManager1.UpdateOrder = ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -443,7 +454,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.btnAddNpc)
         Me.Controls.Add(Me.btnShowCode)
-        Me.Controls.Add(Me.btnSaveCode)
         Me.Controls.Add(Me.txtCode)
         Me.Controls.Add(Me.lblInstanceName)
         Me.Controls.Add(Me.txtInstanceName)
@@ -454,6 +464,7 @@ Partial Class frmMain
         Me.StatusStrip1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.WsbDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -463,7 +474,6 @@ Partial Class frmMain
     Friend WithEvents txtCode As System.Windows.Forms.TextBox
     Friend WithEvents btnAddNpc As System.Windows.Forms.Button
     Friend WithEvents ttpMain As System.Windows.Forms.ToolTip
-    Private WithEvents btnSaveCode As System.Windows.Forms.Button
     Private WithEvents btnShowCode As System.Windows.Forms.Button
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
@@ -491,9 +501,9 @@ Partial Class frmMain
     Friend WithEvents ViewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SyntaxMakeuoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents ToolStripStatusLabel4 As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents ToolStripStatusLabel5 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents sbNpcTotal As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents sbSpellTotal As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents sbFileName As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents lblCode As System.Windows.Forms.Label
     Friend WithEvents SettingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
@@ -510,5 +520,9 @@ Partial Class frmMain
     Friend WithEvents EditToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents WsbDataSet1 As ScriptBuilder_V0._1.WSBDataSet
+    Friend WithEvents NpcTableAdapter1 As ScriptBuilder_V0._1.WSBDataSetTableAdapters.NPCTableAdapter
+    Friend WithEvents TableAdapterManager1 As ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents QueriesTableAdapter1 As ScriptBuilder_V0._1.WSBDataSetTableAdapters.QueriesTableAdapter
 
 End Class

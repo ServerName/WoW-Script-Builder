@@ -30,12 +30,19 @@ Partial Class frmNpcDelete
         Me.TableAdapterManager = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
         Me.cbNpcId2 = New System.Windows.Forms.ComboBox
         Me.btnNpcDelete = New System.Windows.Forms.Button
-        Me.NPCBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         lblNpcId = New System.Windows.Forms.Label
         CType(Me.WSBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NPCBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NPCBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'lblNpcId
+        '
+        lblNpcId.AutoSize = True
+        lblNpcId.Location = New System.Drawing.Point(12, 15)
+        lblNpcId.Name = "lblNpcId"
+        lblNpcId.Size = New System.Drawing.Size(21, 13)
+        lblNpcId.TabIndex = 1
+        lblNpcId.Text = "ID:"
         '
         'WSBDataSet
         '
@@ -59,20 +66,12 @@ Partial Class frmNpcDelete
         Me.TableAdapterManager.NPCTableAdapter = Me.NPCTableAdapter
         Me.TableAdapterManager.UpdateOrder = ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'lblNpcId
-        '
-        lblNpcId.AutoSize = True
-        lblNpcId.Location = New System.Drawing.Point(12, 15)
-        lblNpcId.Name = "lblNpcId"
-        lblNpcId.Size = New System.Drawing.Size(21, 13)
-        lblNpcId.TabIndex = 1
-        lblNpcId.Text = "ID:"
-        '
         'cbNpcId2
         '
         Me.cbNpcId2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NPCBindingSource, "ID", True))
-        Me.cbNpcId2.DataSource = Me.NPCBindingSource1
+        Me.cbNpcId2.DataSource = Me.NPCBindingSource
         Me.cbNpcId2.DisplayMember = "NPCID"
+        Me.cbNpcId2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNpcId2.FormattingEnabled = True
         Me.cbNpcId2.Location = New System.Drawing.Point(39, 12)
         Me.cbNpcId2.Name = "cbNpcId2"
@@ -88,11 +87,6 @@ Partial Class frmNpcDelete
         Me.btnNpcDelete.TabIndex = 3
         Me.btnNpcDelete.Text = "Delete"
         Me.btnNpcDelete.UseVisualStyleBackColor = True
-        '
-        'NPCBindingSource1
-        '
-        Me.NPCBindingSource1.DataMember = "NPC"
-        Me.NPCBindingSource1.DataSource = Me.WSBDataSet
         '
         'frmNpcDelete
         '
@@ -112,7 +106,6 @@ Partial Class frmNpcDelete
         Me.Text = "Delete NPC"
         CType(Me.WSBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NPCBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NPCBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -123,5 +116,4 @@ Partial Class frmNpcDelete
     Friend WithEvents TableAdapterManager As ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
     Friend WithEvents cbNpcId2 As System.Windows.Forms.ComboBox
     Friend WithEvents btnNpcDelete As System.Windows.Forms.Button
-    Friend WithEvents NPCBindingSource1 As System.Windows.Forms.BindingSource
 End Class

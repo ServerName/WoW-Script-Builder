@@ -389,7 +389,7 @@ SELECT ID, NPCID, NPCName, Boss FROM NPC WHERE (ID = @ID)</CommandText>
               <xs:element name="Text" msprop:Generator_UserColumnName="Text" msprop:Generator_ColumnPropNameInRow="Text" msprop:Generator_ColumnVarNameInTable="columnText" msprop:Generator_ColumnPropNameInTable="TextColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
+                    <xs:maxLength value="1000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -439,6 +439,10 @@ SELECT ID, NPCID, NPCName, Boss FROM NPC WHERE (ID = @ID)</CommandText>
     <xs:unique name="NPC_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:NPC" />
       <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:NPC" />
+      <xs:field xpath="mstns:NPCID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -1,9 +1,4 @@
 ﻿Public Class frmMain
-
-    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSaveCode.Click
-        'Save the file
-    End Sub
-
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShowCode.Click
         'Showing the code on the right of the screen.
 
@@ -15,10 +10,15 @@
     End Sub
 
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Statusbar information
+        Dim NpcTotal As Integer
+        NpcTotal = Me.NpcTableAdapter1.Fill(Me.WsbDataSet1.NPC)
+        sbNpcTotal.Text = "Total NPCs: " & NpcTotal
+
+
         'Tooltips
         ttpMain.SetToolTip(btnAddNpc, "Add an NPC to your script!")
         ttpMain.SetToolTip(btnShowCode, "Show the latest version of the code.")
-        ttpMain.SetToolTip(btnSaveCode, "Save the code to a file on your computer." & vbCrLf & "You should check your code first!")
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
@@ -60,5 +60,17 @@
 
     Private Sub ViewToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewToolStripMenuItem1.Click
         frmCommentView.ShowDialog()
+    End Sub
+
+    Private Sub EditToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditToolStripMenuItem3.Click
+        frmNpcEdit.ShowDialog()
+    End Sub
+
+    Private Sub DeleteToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteToolStripMenuItem2.Click
+        frmNpcDelete.ShowDialog()
+    End Sub
+
+    Private Sub ViewToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewToolStripMenuItem3.Click
+        frmNpcView.ShowDialog()
     End Sub
 End Class
