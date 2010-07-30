@@ -8,6 +8,10 @@
     End Sub
 
     Private Sub btnNpcAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNpcAdd.Click
+        NpcName = txtNpcName.Text
+        NpcId = txtNpcId.Text
+        NpcBoss = chkNpcBoss.Checked
+
         'Check if something is filled in
         If txtNpcName.Text = "" And txtNpcId.Text = "" Then
             MessageBox.Show("You haven't filled in the NPC Name and ID", "ERROR: No NPC Name and ID", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -24,6 +28,7 @@
             NpcBoss = chkNpcBoss.Checked
 
             Me.NPCTableAdapter.AddNpc(Me.WSBDataSet.NPC, NpcId, NpcName, NpcBoss)
+            funcFormClose()
             Me.Dispose()
             Me.Close()
         End If

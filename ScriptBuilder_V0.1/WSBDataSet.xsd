@@ -385,11 +385,11 @@ SELECT ID, NPCID, NPCName, Boss FROM NPC WHERE (ID = @ID)</CommandText>
         <xs:element name="Comments" msprop:Generator_UserTableName="Comments" msprop:Generator_RowDeletedName="CommentsRowDeleted" msprop:Generator_RowChangedName="CommentsRowChanged" msprop:Generator_RowClassName="CommentsRow" msprop:Generator_RowChangingName="CommentsRowChanging" msprop:Generator_RowEvArgName="CommentsRowChangeEvent" msprop:Generator_RowEvHandlerName="CommentsRowChangeEventHandler" msprop:Generator_TableClassName="CommentsDataTable" msprop:Generator_TableVarName="tableComments" msprop:Generator_RowDeletingName="CommentsRowDeleting" msprop:Generator_TablePropName="Comments">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
-              <xs:element name="Text" msprop:Generator_UserColumnName="Text" msprop:Generator_ColumnPropNameInRow="Text" msprop:Generator_ColumnVarNameInTable="columnText" msprop:Generator_ColumnPropNameInTable="TextColumn">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="Text" msprop:Generator_UserColumnName="Text" msprop:Generator_ColumnVarNameInTable="columnText" msprop:Generator_ColumnPropNameInRow="Text" msprop:Generator_ColumnPropNameInTable="TextColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="1000" />
+                    <xs:maxLength value="10000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -399,8 +399,8 @@ SELECT ID, NPCID, NPCName, Boss FROM NPC WHERE (ID = @ID)</CommandText>
         <xs:element name="Headers" msprop:Generator_UserTableName="Headers" msprop:Generator_RowDeletedName="HeadersRowDeleted" msprop:Generator_RowChangedName="HeadersRowChanged" msprop:Generator_RowClassName="HeadersRow" msprop:Generator_RowChangingName="HeadersRowChanging" msprop:Generator_RowEvArgName="HeadersRowChangeEvent" msprop:Generator_RowEvHandlerName="HeadersRowChangeEventHandler" msprop:Generator_TableClassName="HeadersDataTable" msprop:Generator_TableVarName="tableHeaders" msprop:Generator_RowDeletingName="HeadersRowDeleting" msprop:Generator_TablePropName="Headers">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
-              <xs:element name="Text" msprop:Generator_UserColumnName="Text" msprop:Generator_ColumnPropNameInRow="Text" msprop:Generator_ColumnVarNameInTable="columnText" msprop:Generator_ColumnPropNameInTable="TextColumn">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="Text" msprop:Generator_UserColumnName="Text" msprop:Generator_ColumnVarNameInTable="columnText" msprop:Generator_ColumnPropNameInRow="Text" msprop:Generator_ColumnPropNameInTable="TextColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -413,16 +413,16 @@ SELECT ID, NPCID, NPCName, Boss FROM NPC WHERE (ID = @ID)</CommandText>
         <xs:element name="NPC" msprop:Generator_UserTableName="NPC" msprop:Generator_RowDeletedName="NPCRowDeleted" msprop:Generator_RowChangedName="NPCRowChanged" msprop:Generator_RowClassName="NPCRow" msprop:Generator_RowChangingName="NPCRowChanging" msprop:Generator_RowEvArgName="NPCRowChangeEvent" msprop:Generator_RowEvHandlerName="NPCRowChangeEventHandler" msprop:Generator_TableClassName="NPCDataTable" msprop:Generator_TableVarName="tableNPC" msprop:Generator_RowDeletingName="NPCRowDeleting" msprop:Generator_TablePropName="NPC">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
-              <xs:element name="NPCID" msprop:Generator_UserColumnName="NPCID" msprop:Generator_ColumnPropNameInRow="NPCID" msprop:Generator_ColumnVarNameInTable="columnNPCID" msprop:Generator_ColumnPropNameInTable="NPCIDColumn" type="xs:int" />
-              <xs:element name="NPCName" msprop:Generator_UserColumnName="NPCName" msprop:Generator_ColumnPropNameInRow="NPCName" msprop:Generator_ColumnVarNameInTable="columnNPCName" msprop:Generator_ColumnPropNameInTable="NPCNameColumn">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="NPCID" msprop:Generator_UserColumnName="NPCID" msprop:Generator_ColumnVarNameInTable="columnNPCID" msprop:Generator_ColumnPropNameInRow="NPCID" msprop:Generator_ColumnPropNameInTable="NPCIDColumn" type="xs:int" />
+              <xs:element name="NPCName" msprop:Generator_UserColumnName="NPCName" msprop:Generator_ColumnVarNameInTable="columnNPCName" msprop:Generator_ColumnPropNameInRow="NPCName" msprop:Generator_ColumnPropNameInTable="NPCNameColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Boss" msprop:Generator_UserColumnName="Boss" msprop:Generator_ColumnPropNameInRow="Boss" msprop:Generator_ColumnVarNameInTable="columnBoss" msprop:Generator_ColumnPropNameInTable="BossColumn" type="xs:int" />
+              <xs:element name="Boss" msprop:Generator_UserColumnName="Boss" msprop:Generator_ColumnVarNameInTable="columnBoss" msprop:Generator_ColumnPropNameInRow="Boss" msprop:Generator_ColumnPropNameInTable="BossColumn" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

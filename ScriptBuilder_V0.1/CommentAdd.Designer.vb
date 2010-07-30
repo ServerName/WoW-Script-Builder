@@ -77,6 +77,7 @@ Partial Class frmCommentAdd
         Me.txtCommentText.Name = "txtCommentText"
         Me.txtCommentText.Size = New System.Drawing.Size(311, 150)
         Me.txtCommentText.TabIndex = 2
+        Me.txtCommentText.WordWrap = False
         '
         'btnCommentAdd
         '

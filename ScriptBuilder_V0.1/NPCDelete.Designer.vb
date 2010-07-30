@@ -24,13 +24,16 @@ Partial Class frmNpcDelete
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim lblNpcId As System.Windows.Forms.Label
+        Dim lblNpcName As System.Windows.Forms.Label
         Me.WSBDataSet = New ScriptBuilder_V0._1.WSBDataSet
         Me.NPCBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NPCTableAdapter = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.NPCTableAdapter
         Me.TableAdapterManager = New ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
         Me.cbNpcId2 = New System.Windows.Forms.ComboBox
         Me.btnNpcDelete = New System.Windows.Forms.Button
+        Me.NPCNameComboBox = New System.Windows.Forms.ComboBox
         lblNpcId = New System.Windows.Forms.Label
+        lblNpcName = New System.Windows.Forms.Label
         CType(Me.WSBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NPCBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -38,7 +41,7 @@ Partial Class frmNpcDelete
         'lblNpcId
         '
         lblNpcId.AutoSize = True
-        lblNpcId.Location = New System.Drawing.Point(12, 15)
+        lblNpcId.Location = New System.Drawing.Point(12, 55)
         lblNpcId.Name = "lblNpcId"
         lblNpcId.Size = New System.Drawing.Size(21, 13)
         lblNpcId.TabIndex = 1
@@ -73,7 +76,7 @@ Partial Class frmNpcDelete
         Me.cbNpcId2.DisplayMember = "NPCID"
         Me.cbNpcId2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNpcId2.FormattingEnabled = True
-        Me.cbNpcId2.Location = New System.Drawing.Point(39, 12)
+        Me.cbNpcId2.Location = New System.Drawing.Point(39, 52)
         Me.cbNpcId2.Name = "cbNpcId2"
         Me.cbNpcId2.Size = New System.Drawing.Size(138, 21)
         Me.cbNpcId2.TabIndex = 2
@@ -81,18 +84,42 @@ Partial Class frmNpcDelete
         '
         'btnNpcDelete
         '
-        Me.btnNpcDelete.Location = New System.Drawing.Point(183, 12)
+        Me.btnNpcDelete.Location = New System.Drawing.Point(183, 51)
         Me.btnNpcDelete.Name = "btnNpcDelete"
         Me.btnNpcDelete.Size = New System.Drawing.Size(75, 23)
         Me.btnNpcDelete.TabIndex = 3
         Me.btnNpcDelete.Text = "Delete"
         Me.btnNpcDelete.UseVisualStyleBackColor = True
         '
+        'lblNpcName
+        '
+        lblNpcName.AutoSize = True
+        lblNpcName.Location = New System.Drawing.Point(12, 9)
+        lblNpcName.Name = "lblNpcName"
+        lblNpcName.Size = New System.Drawing.Size(63, 13)
+        lblNpcName.TabIndex = 3
+        lblNpcName.Text = "NPC Name:"
+        '
+        'NPCNameComboBox
+        '
+        Me.NPCNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NPCBindingSource, "NPCName", True))
+        Me.NPCNameComboBox.DataSource = Me.NPCBindingSource
+        Me.NPCNameComboBox.DisplayMember = "NPCName"
+        Me.NPCNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.NPCNameComboBox.FormattingEnabled = True
+        Me.NPCNameComboBox.Location = New System.Drawing.Point(12, 25)
+        Me.NPCNameComboBox.Name = "NPCNameComboBox"
+        Me.NPCNameComboBox.Size = New System.Drawing.Size(246, 21)
+        Me.NPCNameComboBox.TabIndex = 5
+        Me.NPCNameComboBox.ValueMember = "NPCName"
+        '
         'frmNpcDelete
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(270, 47)
+        Me.ClientSize = New System.Drawing.Size(270, 83)
+        Me.Controls.Add(Me.NPCNameComboBox)
+        Me.Controls.Add(lblNpcName)
         Me.Controls.Add(Me.btnNpcDelete)
         Me.Controls.Add(lblNpcId)
         Me.Controls.Add(Me.cbNpcId2)
@@ -116,4 +143,5 @@ Partial Class frmNpcDelete
     Friend WithEvents TableAdapterManager As ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
     Friend WithEvents cbNpcId2 As System.Windows.Forms.ComboBox
     Friend WithEvents btnNpcDelete As System.Windows.Forms.Button
+    Friend WithEvents NPCNameComboBox As System.Windows.Forms.ComboBox
 End Class

@@ -26,8 +26,6 @@ Partial Class frmMain
         Me.txtInstanceName = New System.Windows.Forms.TextBox
         Me.lblInstanceName = New System.Windows.Forms.Label
         Me.txtCode = New System.Windows.Forms.TextBox
-        Me.btnShowCode = New System.Windows.Forms.Button
-        Me.btnAddNpc = New System.Windows.Forms.Button
         Me.ttpMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip
         Me.sbNpcTotal = New System.Windows.Forms.ToolStripStatusLabel
@@ -113,26 +111,6 @@ Partial Class frmMain
         Me.txtCode.TabIndex = 7
         Me.txtCode.WordWrap = False
         '
-        'btnShowCode
-        '
-        Me.btnShowCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnShowCode.Location = New System.Drawing.Point(93, 312)
-        Me.btnShowCode.Name = "btnShowCode"
-        Me.btnShowCode.Size = New System.Drawing.Size(75, 23)
-        Me.btnShowCode.TabIndex = 9
-        Me.btnShowCode.Text = "Show Code"
-        Me.btnShowCode.UseVisualStyleBackColor = True
-        '
-        'btnAddNpc
-        '
-        Me.btnAddNpc.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAddNpc.Location = New System.Drawing.Point(12, 312)
-        Me.btnAddNpc.Name = "btnAddNpc"
-        Me.btnAddNpc.Size = New System.Drawing.Size(75, 23)
-        Me.btnAddNpc.TabIndex = 10
-        Me.btnAddNpc.Text = "Add NPC"
-        Me.btnAddNpc.UseVisualStyleBackColor = True
-        '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.sbNpcTotal, Me.sbSpellTotal, Me.sbFileName})
@@ -147,13 +125,13 @@ Partial Class frmMain
         Me.sbNpcTotal.Name = "sbNpcTotal"
         Me.sbNpcTotal.Size = New System.Drawing.Size(212, 19)
         Me.sbNpcTotal.Spring = True
-        Me.sbNpcTotal.Text = "Total NPCs: 0"
+        Me.sbNpcTotal.Text = "Total NPCs: ERROR"
         '
         'sbSpellTotal
         '
         Me.sbSpellTotal.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left
         Me.sbSpellTotal.Name = "sbSpellTotal"
-        Me.sbSpellTotal.Size = New System.Drawing.Size(212, 19)
+        Me.sbSpellTotal.Size = New System.Drawing.Size(223, 19)
         Me.sbSpellTotal.Spring = True
         Me.sbSpellTotal.Text = "Total Spells: 0"
         '
@@ -291,7 +269,7 @@ Partial Class frmMain
         'ViewCodeToolStripMenuItem
         '
         Me.ViewCodeToolStripMenuItem.Name = "ViewCodeToolStripMenuItem"
-        Me.ViewCodeToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.ViewCodeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ViewCodeToolStripMenuItem.Text = "View Code"
         '
         'EditCodeToolStripMenuItem
@@ -452,8 +430,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblCode)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.btnAddNpc)
-        Me.Controls.Add(Me.btnShowCode)
         Me.Controls.Add(Me.txtCode)
         Me.Controls.Add(Me.lblInstanceName)
         Me.Controls.Add(Me.txtInstanceName)
@@ -472,9 +448,7 @@ Partial Class frmMain
     Friend WithEvents txtInstanceName As System.Windows.Forms.TextBox
     Friend WithEvents lblInstanceName As System.Windows.Forms.Label
     Friend WithEvents txtCode As System.Windows.Forms.TextBox
-    Friend WithEvents btnAddNpc As System.Windows.Forms.Button
     Friend WithEvents ttpMain As System.Windows.Forms.ToolTip
-    Private WithEvents btnShowCode As System.Windows.Forms.Button
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

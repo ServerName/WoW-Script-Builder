@@ -171,8 +171,8 @@ Partial Class frmNpcEdit
     Friend WithEvents NPCTableAdapter As ScriptBuilder_V0._1.WSBDataSetTableAdapters.NPCTableAdapter
     Friend WithEvents TableAdapterManager As ScriptBuilder_V0._1.WSBDataSetTableAdapters.TableAdapterManager
     Friend WithEvents chkNpcBoss As System.Windows.Forms.CheckBox
-    Friend WithEvents txtNpcName As System.Windows.Forms.TextBox
     Friend WithEvents btnNpcEdit As System.Windows.Forms.Button
     Friend WithEvents txtNpcId As System.Windows.Forms.TextBox
     Friend WithEvents cbNpcId2 As System.Windows.Forms.ComboBox
+    Private WithEvents txtNpcName As System.Windows.Forms.TextBox
 End Class

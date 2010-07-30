@@ -1,24 +1,8 @@
 ﻿Public Class frmMain
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShowCode.Click
-        'Showing the code on the right of the screen.
-
-        'End of the code showing.
-    End Sub
-
-    Private Sub btnAddNpc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddNpc.Click
-        frmNpcAdd.ShowDialog()
-    End Sub
-
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Statusbar information
-        Dim NpcTotal As Integer
         NpcTotal = Me.NpcTableAdapter1.Fill(Me.WsbDataSet1.NPC)
         sbNpcTotal.Text = "Total NPCs: " & NpcTotal
-
-
-        'Tooltips
-        ttpMain.SetToolTip(btnAddNpc, "Add an NPC to your script!")
-        ttpMain.SetToolTip(btnShowCode, "Show the latest version of the code.")
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
@@ -72,5 +56,11 @@
 
     Private Sub ViewToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewToolStripMenuItem3.Click
         frmNpcView.ShowDialog()
+    End Sub
+
+    Private Sub ViewCodeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewCodeToolStripMenuItem.Click
+        'Showing the code on the right of the screen.
+
+        'End of the code showing.
     End Sub
 End Class

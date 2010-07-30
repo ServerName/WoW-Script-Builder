@@ -454,7 +454,7 @@ Partial Public Class WSBDataSet
             Me.columnID.ReadOnly = true
             Me.columnID.Unique = true
             Me.columnText.AllowDBNull = false
-            Me.columnText.MaxLength = 1000
+            Me.columnText.MaxLength = 10000
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
